@@ -1,5 +1,6 @@
 import { ContainerHeader, LogoHeader } from "./styledHeader";
 import logo from "../../assets/logo.png"
+import Nav from "./Nav/Nav";
 
 
 function Header (){
@@ -8,6 +9,7 @@ function Header (){
         <>
             <ContainerHeader> 
                 <LogoHeader src={logo} alt="Logo EmpreGO"/>
+                <Nav/>
             </ContainerHeader>
 
         </>

@@ -1,29 +1,50 @@
-import "./styledNav"
-import {SlBubbles} from 'react-icons/sl'; 
-import {ImBubbles2} from 'react-icons/im'; 
+import "./styledNav";
+import { NavHeader, barraPesquisa } from "./styledNav";
 
-const Nav = ({BotaoNav, aoSelecionar }) => {
-    function selecionar(){
-        aoSelecionar(BotaoNav.id);
-    }
-    const BotaoSelecionado = {
-        size: 25,
-        onClick: selecionar,
-    }
-}
-
+function Nav (){
     return(
         <NavHeader>
-        {BotaoNav.selecionado
-            ? <ImBubbles2{...BotaoSelecionado} color= '#0B66C2'/>
-            : <SlBubbles{...BotaoSelecionado}/>
-        }
-         {BotaoNav.selecionado
-            ? <ImBubbles2{...BotaoSelecionado} color= '#0B66C2'/>
-            : <SlBubbles{...BotaoSelecionado}/>
-        }
-
-    </NavHeader>
+            <barraPesquisa > <Input placeholder=""/> </barraPesquisa>
+        </NavHeader>
     )
+}
 
 export default Nav;
+
+
+
+
+
+
+
+
+
+// import "./styledNav";
+// import {SlBubbles} from 'react-icons/sl'; 
+// import {ImBubbles2} from 'react-icons/im'; 
+
+// const Nav = ({BotaoNav, aoSelecionar }) => {
+//     function selecionar(){
+//         aoSelecionar(BotaoNav.id);
+//     }
+//     const BotaoSelecionado = {
+//         size: 25,
+//         onClick: selecionar,
+//     }
+// }
+
+//     return(
+//         <NavHeader>
+//         {BotaoNav.selecionado
+//             ? <ImBubbles2{...BotaoSelecionado} color= '#0B66C2'/>
+//             : <SlBubbles{...BotaoSelecionado}/>
+//         }
+//          {BotaoNav.selecionado
+//             ? <ImBubbles2{...BotaoSelecionado} color= '#0B66C2'/>
+//             : <SlBubbles{...BotaoSelecionado}/>
+//         }
+
+//     </NavHeader>
+//     )
+
+// export default Nav;
