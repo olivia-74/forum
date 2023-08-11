@@ -1,10 +1,10 @@
 import "./styledNav";
-import { NavHeader, barraPesquisa } from "./styledNav";
+import { InputStyled, NavHeader, barraPesquisa } from "./styledNav";
 
 function Nav (){
     return(
         <NavHeader>
-            <barraPesquisa > <Input placeholder=""/> </barraPesquisa>
+            <InputStyled placeholder=""/> 
         </NavHeader>
     )
 }

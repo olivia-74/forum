@@ -29,7 +29,11 @@ export const barraPesquisa = styled.div`
     
 `
 
-export const Input = styled.input.attrs(props => ({type: "text", size: props.$size || "1em", }))
+export const InputStyled = styled.input`
+    background-color: blue;
+`
+
+/* export const Input = styled.input.attrs(props => ({type: "text", size: props.$size || "1em", }))
 <{ $size?: string }>`
     color: #BF4F74;
     font-size: 1em;
@@ -42,4 +46,4 @@ export const Input = styled.input.attrs(props => ({type: "text", size: props.$si
     .Icones{
      display: inline-block;
     }
-    `;
+    `; */
