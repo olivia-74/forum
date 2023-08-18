@@ -1,0 +1,64 @@
+
+ .cardUsuario {
+    width: 280px;
+    margin-top: 5vh;
+    display: table-column;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cardUsuario .cabecalho {
+    display: flex;
+    background-color:  #0B66C2;
+    border-radius: 10px 10px 0px 0px;
+    justify-content: center;
+}
+
+
+.cardUsuario .cabecalho img {
+    width: 100px;
+    border-radius: 50%;
+    position: relative;
+    bottom: -50px;
+}
+
+.cardUsuario .nome {
+    background: #FFFFFF;
+    padding: 6vh 6.5vh 1vh;
+    color:#0B66C2
+}
+
+.cardUsuario button {
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    color: #0B66C2;
+    text-decoration: underline;
+}
+
+.cardUsuario .blocos {
+    margin-top: 1vh;
+    display: flex;
+    background: #FFFFFF;
+    justify-content: center;
+    padding: 2vh 2vh 0vh 2vh;
+}
+
+.cardUsuario p {
+    margin-left: 1.5vw;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+
+
+.cardUsuario .rodape .containerFotos .fotos{
+    display: inline-block;
+    margin-left: 1vw;
+    background-color: #0B66C2;
+    
+    width: 20px;
+    height: 20px;
+    border-radius: 0%;
+}
+
+
