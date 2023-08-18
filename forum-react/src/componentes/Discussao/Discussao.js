@@ -1,0 +1,3 @@
+.postagem{
+    width: 
+}

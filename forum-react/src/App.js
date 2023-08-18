@@ -1,16 +1,14 @@
-import './App.css';
+import Home from "./componentes/paginas/Home/Home";
+import StyledGlobal from "./styledGlobal";
 
 function App() {
   return (
-    <div className="App">
-      oie! descomentem a página que vocês quiserem ver no navegador
-      {/* <Cadastro/> */}
-      {/* <PaginaInicial/> */}
-      {/* <PerfilUsuario/> */}
-      {/* <Home/> */}
-      {/* <MinhaConta/> */}
-
-    </div>
+    <>
+    
+        <StyledGlobal/> 
+        <Home/>
+      
+    </>
   );
 }
 
