@@ -27,13 +27,13 @@ export const StyledPaginaInicial = styled.div`
 
 
 export const TextoPagina = styled.div`
-color: #FBFBFB;
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-font-family: Patua One;
-font-size: 59px;
-padding-right: 398px;
-position: absolute;
-top: 85vh;
+    color: #FBFBFB;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-family: Patua One;
+    font-size: 59px;
+    padding-right: 398px;
+    position: absolute;
+    top: 85vh;
 `
 
 export const RodapePaginaInicial = styled.div`
