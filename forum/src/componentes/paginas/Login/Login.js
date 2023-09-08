@@ -1,7 +1,27 @@
 import Logo from "../../../assets/logo.png"
-import { BotaoEntrar, BotaoHeader, Cabecalho, CardGrande, Footer, InputNome, InputSenha, LogoHeader, PosBotao, Texto1, Texto2, UsuarioStyle } from './styledLogin';
+import { BotaoEntrar, BotaoHeader, Cabecalho, CardGrande, Footer, InputNome, InputSenha, LogoHeader, PosBotao, Texto1, Texto2, UsuarioStyle, Label } from './styledLogin';
+import axios from "axios"
+import { useState } from "react"
 
 function Login() {
+
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    const handleSubmit = (event) =>{
+        
+        const credentials = (email, password)
+
+        axios.post("http://localhost:8000/login", credentials,{
+            headers:{
+                'Content-Type': 'application/json',
+            },
+        }).then(response =>{
+            alert(response.data.message)
+        })
+        .catch(error => console.log(error))
+    }
+    
     return (
         <>
             <Cabecalho>
@@ -13,15 +33,16 @@ function Login() {
                 <Texto1>
                     Entrar
                 </Texto1>
-                <UsuarioStyle>E-mail ou Usuário:</UsuarioStyle>
-                <InputNome placeholder="Ex: DanielGameplays321"></InputNome>
+                
+                <Label>E-mail</Label>
+                <InputNome placeholder="Ex: DanielGameplays321"  type="email" value={email} onChange={(event) => setEmail(event.target.value)}></InputNome>
 
-                <Texto2>
+                <Label>
                     Senha:
-                </Texto2>
-                <InputSenha placeholder="********"></InputSenha>
+                </Label>
+                <InputSenha placeholder="********" input type="password" value={password} onChange={(event) => setPassword(event.target.value)}></InputSenha>
                 <PosBotao>
-                    <BotaoEntrar>Entrar</BotaoEntrar>
+                    <BotaoEntrar type="submit">Entrar</BotaoEntrar>
                 </PosBotao>
             </CardGrande>
 

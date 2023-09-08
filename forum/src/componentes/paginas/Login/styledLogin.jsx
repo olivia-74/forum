@@ -2,33 +2,27 @@ import styled from "styled-components";
 
 export const Cabecalho = styled.header`
     background-color: #ffffff;
-    height: 6vh;
+    height: 8vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-content: center;
-    display: flex;
+    display: flex;  
+    padding: 2vh;
 `
 export const LogoHeader = styled.img`
     background-color: white;
-    margin-left: 35vw;
 `
 
 export const BotaoHeader = styled.button`
-    background-color: white;
-    font-size: 30px;
-    color: rgba(24, 39, 121, 1);
-    font-weight: bolder;
-    border-radius: 40px;
-    border: 5px solid #0B66C2;
-    display: flex;
+    display: flex; 
     align-items: center;
-    justify-self: end;
-    right: 5px;
-    padding-left: 1vw;
-    padding-right: 1vw;
-    margin-left: 20vw;
-    height: 5vh;
-    margin-top: 0.5vh;
+    justify-content: center;
+    font-size: 20px;
+    color: rgba(24, 39, 121, 1);
+    border: 3px solid #0B66C2;
+    border-radius: 40px;
+    padding: 1vh 5vh 1vh 5vh;
+
 `
 
 export const CardGrande = styled.div`
@@ -61,8 +55,7 @@ export const Footer = styled.footer`
 `
 
 export const UsuarioStyle = styled.h2`
-    margin-top: 10vh;
-    margin-left: 10vw;
+    margin: 0 20vh 0 20vh;
     font-family: "Mohave", sans-serif;
     color: #182779;
     background-color: #FEFEFE;
@@ -73,10 +66,21 @@ export const InputNome = styled.input`
     height: 4vh;
     margin-top: 2vh;
     margin-left: 10vw;
+    padding-left: 3vh;
     background-color: #FDFDFD;
     outline-color: rgba(176, 176, 176, 1);
     border-radius: 10px;
+    border: solid 1px;
 `
+export const Label = styled.label`
+    display: block;
+    margin-top: 5vh;
+    margin-left: 10vw;
+    background-color: #FEFEFE;
+    font-family: "Mohave", sans-serif;
+    color: #182779;
+`
+
 
 export const Texto2 = styled.h2`
     margin-top: 5vh;
@@ -87,13 +91,16 @@ export const Texto2 = styled.h2`
 `
 
 export const InputSenha = styled.input`
+
     width: 35vw;
     height: 4vh;
     margin-top: 2vh;
     margin-left: 10vw;
+    padding-left: 3vh;
     background-color: #FDFDFD;
     outline-color: rgba(176, 176, 176, 1);
     border-radius: 10px;
+    border: solid 1px;
 `
 
 export const BotaoEntrar = styled.button`
