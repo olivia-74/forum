@@ -1,13 +1,19 @@
 
-import Login from "./componentes/paginas/Login/Login";
+// import Home from "./componentes/paginas/Home/Home";
+import Discussao from "./componentes/paginas/Discussao/Discussao";
 import GlobalStyle from "./styledGlobal";
-// import Inicial from './componentes/paginas/Inicial/PaginaInicial'
+import { ChakraProvider } from '@chakra-ui/react'
+
 
 function App() {
   return (
     <>
       <GlobalStyle />
-      <Login />
+      <ChakraProvider>
+        {/* <Home/> */}
+        <Discussao/>
+      </ChakraProvider>
+      
     </>
   );
 }
