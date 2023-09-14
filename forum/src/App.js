@@ -4,6 +4,7 @@ import Login from "./componentes/paginas/Login/Login"
 import Discussao from "./componentes/paginas/Discussao/Discussao";
 import GlobalStyle from "./styledGlobal";
 import { ChakraProvider } from '@chakra-ui/react'
+import Rotas from "./rotas/Rotas";
 
 
 function App() {
@@ -12,8 +13,9 @@ function App() {
       <GlobalStyle />
       <ChakraProvider>
         {/* <Home/> */}
-        <Login/>
-        <Discussao/>
+        {/* <Login/> */}
+        {/* <Discussao/> */}
+        <Rotas/>
       </ChakraProvider>
       
     </>

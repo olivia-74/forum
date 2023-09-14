@@ -1,56 +1,67 @@
 import Logo from "../../../assets/logo.png"
-import { BotaoEntrar, BotaoHeader, Cabecalho, CardGrande, Footer, InputNome, InputSenha, LogoHeader, PosBotao, Texto1, Texto2, UsuarioStyle, Label } from './styledLogin';
-import axios from "axios"
+import { BotaoEntrar, BotaoHeader, Cabecalho, Card, Footer, InputSenha, LogoHeader, PosBotao, Texto1, Texto2, UsuarioStyle, Label, Container } from './styledLogin';
+import axios from "axios";
 import { useState } from "react"
+import { useNavigate } from "react-router";
+
 
 function Login() {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    const handleSubmit = (event) =>{
-        
-        const credentials = (email, password)
+    const handleSubmit = (e) => {
+        e.preventDefault()
 
-        axios.post("http://localhost:8000/login", credentials,{
+        const credentials = {email, password};
+        axios.post('http://localhost:8000/login', credentials, {
             headers:{
                 'Content-Type': 'application/json',
             },
-        }).then(response =>{
-            alert(response.data.message)
         })
-        .catch(error => console.log(error))
+        .then(response => {
+            alert(response.data.message)
+            saveUserInfoLocalStorage(response.data.token)
+            goToHome()
+        })
+        .catch (error => console.log(error))
+    }
+
+    const saveUserInfoLocalStorage = (token) => {
+        localStorage.setItem('token', token)
+        localStorage.setItem('email, email')
+    }
+
+
+    const navigate = useNavigate()
+    const goToHome = () => {
+        navigate('/home')
+    }
+    const goToSignin = () => {
+        navigate('/signin')
     }
     
     return (
         <>
             <Cabecalho>
-                <LogoHeader src={Logo} />
-                <BotaoHeader>Criar nova conta</BotaoHeader>
+                <img src={Logo} />
+                <button onClick={goToSignin}>Criar nova conta</button>
             </Cabecalho>
 
-            <CardGrande>
-                <Texto1>
-                    Entrar
-                </Texto1>
-                
-                <Label>E-mail</Label>
-                <InputNome placeholder="Ex: DanielGameplays321"  type="email" value={email} onChange={(event) => setEmail(event.target.value)}></InputNome>
-
-                <Label>
-                    Senha:
-                </Label>
-                <InputSenha placeholder="********" input type="password" value={password} onChange={(event) => setPassword(event.target.value)}></InputSenha>
-                <PosBotao>
-                    <BotaoEntrar type="submit">Entrar</BotaoEntrar>
-                </PosBotao>
-            </CardGrande>
-
-            <Footer>
-            </Footer>
+        <Container>
+            <Card>
+                <form onSubmit={handleSubmit}>
+                    <h1> Entrar </h1>
+                    <label>E-mail</label>
+                    <input placeholder="Insira seu e-mail"  type="email" value={email} onChange={(event) => setEmail(event.target.value)} required></input>
+                    <label> Senha </label>
+                    <input placeholder="Insira sua senha" input type="password" value={password} onChange={(event) => setPassword(event.target.value)}></input>
+                    <button type="submit" onClick={handleSubmit}>Entrar</button>
+                </form>
+            </Card>
+        </Container>
+            <Footer/>
         </>
     )
 }
 export default Login;
-
-//href={Logo} alt='logo'

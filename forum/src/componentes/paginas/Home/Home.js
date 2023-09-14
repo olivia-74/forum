@@ -1,23 +1,26 @@
 import Header from "../../elementos/Header/Header"
 import Footer from "../../elementos/Footer/Footer"
 import Publicacoes from "../../elementos/Publicacoes/Publicacoes"
-import { BalaoInput, ContainerHome, Foto, Postar, DetalheDireita, Input, BotaoPublicar, Linha } from "./styledHome"
+import { BalaoInput, ContainerHome, Foto, DetalheDireita, Input, BotaoPublicar, Linha, NovaPublicacao } from "./styledHome"
+import Detalhe from "../../../assets/fala.svg"
 
 function Home(){
     return(
         <>
             <Header/>
             <ContainerHome>
-                <Postar>
-                    <BalaoInput><Input type="text" placeholder="Comece uma discussao..."></Input> </BalaoInput> <DetalheDireita/>
-                    <Foto src=""/>
-                </Postar>
-                <BotaoPublicar>Publicar</BotaoPublicar> 
+                <NovaPublicacao>
+                    <div>
+                        <textarea type="text" placeholder="Comece uma discussao..."/>
+                        <img src={Detalhe}/>
+                    </div>
+                    <img/>
+                    <button>Publicar</button> 
+                </NovaPublicacao>
+                
                 <Linha/>
-                <Publicacoes/>
-                <Publicacoes/>
-                <Publicacoes/>
-                <Footer/>
+               
+               
                
 
             </ContainerHome>

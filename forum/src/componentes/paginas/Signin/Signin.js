@@ -1,51 +1,41 @@
 import Logo from "../../../assets/logo.png"
-import { BotaoHeader, Cabecalho, CardGrande, Footer, LogoHeader, Label,} from './styledSignin';
-import axios from "axios"
-import { useState } from "react"
+import { Cabecalho, Card, Footer, Container } from './styledSignin';
+import { useNavigate } from "react-router";
 
-function Signin() {
 
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+function Login() {
 
-    const handleSubmit = (event) =>{
-        
-        const credentials = (email, password)
 
-        axios.post("http://localhost:8000/login", credentials,{
-            headers:{
-                'Content-Type': 'application/json',
-            },
-        }).then(response =>{
-            alert(response.data.message)
-        })
-        .catch(error => console.log(error))
+    const navigate = useNavigate()
+
+    const goToHome = () => {
+        navigate('/home')
     }
     
     return (
         <>
-       
             <Cabecalho>
-                <LogoHeader src={Logo} />
-                <BotaoHeader>Criar nova conta</BotaoHeader>
+                <img src={Logo} />
             </Cabecalho>
-            <CardGrande>
-                <h1> Entrar </h1>
-                <label>E-mail</label>
-                <input placeholder="Ex: DanielGameplays321"  type="email" value={email} onChange={(event) => setEmail(event.target.value)} required></input>
 
-                <Label>
-                    Senha:
-                </Label>
-                <input placeholder="********" input type="password" value={password} onChange={(event) => setPassword(event.target.value)} required></input>
-                <button type="submit" onSubmit={handleSubmit}>Entrar</button>
-            </CardGrande>
-         
-            <Footer>
-            </Footer>
+        <Container>
+            <Card>
+                <form>
+                    <h1> Criar nova conta </h1>
+                    <label>Nome completo</label>
+                    <input placeholder="Insira seu nome e sobrenome"  type="text" required />
+                    <label>Usuario</label>
+                    <input placeholder="Defina um nome de usuario"  type="text" required />
+                    <label>E-mail</label>
+                    <input placeholder="Insira seu e-mail"  type="email" required />
+                    <label>Senha</label>
+                    <input placeholder="Defina uma senha" type="password" />
+                    <button onClick={goToHome}>Entrar</button>
+                </form>
+            </Card>
+        </Container>
+            <Footer/>
         </>
     )
 }
-export default Signin;
-
-//href={Logo} alt='logo'
+export default Login;
