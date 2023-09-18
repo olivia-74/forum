@@ -1,11 +1,29 @@
 import {Menu, MenuButton, MenuList, MenuItem, MenuDivider} from '@chakra-ui/react'
 import LogoHeader from '../../../assets/logoMini.png'
 import { ContainerHeader, IconeInput, Input, Logo, ContainerBotoes, Botoes, Icone } from "./styledHeader"
+import { useNavigate } from 'react-router'
+
 
 
 
 
 function Header(){
+
+    const navigate = useNavigate()
+
+    const handleLogout = () =>{
+        localStorage.removeItem('token')
+        localStorage.removeItem('email')
+        navigate('/')
+    }
+
+    const goToHome = () => {
+        navigate('/home')
+    }
+    const goToPerfil = () => {
+        navigate('/perfil')
+    }
+
     return(
         <>
         <ContainerHeader>
@@ -15,21 +33,10 @@ function Header(){
             <IconeInput> 🔍︎ </IconeInput>
 
             <ContainerBotoes> 
-                <Botoes><Menu> 
-                    <MenuButton  aria-label='Options'> <Icone> 🔽 </Icone> <Icone className="Texto">Acoes</Icone></MenuButton>
-                            <MenuList>
-                                <MenuItem> Acessar forum </MenuItem>
-                                <MenuItem> Ver notificacoes </MenuItem>
-                                <MenuItem> Ver perfil </MenuItem> <MenuDivider/>
-
-                                <MenuItem> Minha conta </MenuItem>
-                                <MenuItem> Sair  </MenuItem>
-                            </MenuList>
-                 </Menu> </Botoes>  
-                <Botoes> <Icone>👤</Icone><Icone className="Texto">Perfil</Icone> </Botoes>                
-                <Botoes> <Icone>🔔</Icone><Icone className="Texto">Notificacoes</Icone> </Botoes>
-                <Botoes> <Icone>💬</Icone><Icone className="Texto">Forum</Icone> </Botoes>
-                
+                <button onClick={handleLogout}>🚪 <p>Sair</p> </button>  
+                <button onClick={goToPerfil}>👤 <p>Perfil</p> </button>  
+                <button onClick={goToHome}>🔔 <p>Notificacoes</p> </button>                
+                <button onClick={goToHome}>💬 <p>Forum</p> </button>                              
             </ContainerBotoes>
         </ContainerHeader>
         </>

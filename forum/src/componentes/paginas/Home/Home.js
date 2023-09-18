@@ -1,7 +1,7 @@
 import Header from "../../elementos/Header/Header"
 import Footer from "../../elementos/Footer/Footer"
-import Publicacoes from "../../elementos/Publicacoes/Publicacoes"
-import { BalaoInput, ContainerHome, Foto, DetalheDireita, Input, BotaoPublicar, Linha, NovaPublicacao } from "./styledHome"
+import Feed from "../../elementos/Feed/Feed"
+import { ContainerHome, Linha, NovaPublicacao} from "./styledHome"
 import Detalhe from "../../../assets/fala.svg"
 
 function Home(){
@@ -9,6 +9,7 @@ function Home(){
         <>
             <Header/>
             <ContainerHome>
+
                 <NovaPublicacao>
                     <div>
                         <textarea type="text" placeholder="Comece uma discussao..."/>
@@ -19,11 +20,14 @@ function Home(){
                 </NovaPublicacao>
                 
                 <Linha/>
-               
-               
-               
+
+                <Feed/>
+                <Feed/>
+                <Feed/>
 
             </ContainerHome>
+
+            <Footer/>
 
 
         </>

@@ -39,15 +39,26 @@ export const IconeInput = styled.button`
 export const ContainerBotoes = styled.div`
     margin-left: 52vw;
     background-color: white;
+
+    button{
+        display: inline-flexbox;
+        color: black;
+        justify-content: center;
+        background-color: white;
+        float: right;
+        margin-left: 1vw; 
+        font-size: 2vw;
+
+        p{
+            background-color: white;
+            font-size: 10px;
+            font-weight: bold;
+        }
+    }
 `
 
 export const Botoes = styled.button`
-    display: inline-flexbox;
-    color: black;
-    justify-content: center;
-    background-color: white;
-    float: right;
-    margin-left: 1vw;
+    
 `
 
 export const Icone = styled.p`
@@ -58,6 +69,10 @@ export const Icone = styled.p`
         font-size: 0.7vw;
         margin-top: 0.2vh;
         font-weight: bolder;
+
+        &:hover{
+            text-decoration: underline;
+        }
     }
 
 `

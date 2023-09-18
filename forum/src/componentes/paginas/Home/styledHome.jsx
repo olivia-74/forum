@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import detalheD from '../../../assets/fala.svg'
 
 export const ContainerHome = styled.div`
     background-color: #F5F1F0;
@@ -10,7 +9,7 @@ export const ContainerHome = styled.div`
     box-sizing: border-box;
     background-color: #F5F1F0;
     justify-items: center;
-    display: flex;
+    display: box;
     justify-content: center;
 `
 
@@ -20,6 +19,8 @@ export const NovaPublicacao = styled.div`
     padding: 5vh;
     height: fit-content;
     margin-top: 3vh;
+    margin-left: 10vw;
+    margin-bottom: 5vh;
 
     div{
         width: 88%;
@@ -27,7 +28,6 @@ export const NovaPublicacao = styled.div`
         background-color: #ffffff;
         padding: 10px;
         border-radius: 10px;
-        margin-top: 1vh;  
         display: flex;
         
         textarea{
@@ -43,8 +43,6 @@ export const NovaPublicacao = styled.div`
             height: 3vh;
             margin-right: -4vw;
             margin-top: -1.5vh;
-
-
             }
 
     }
@@ -67,7 +65,7 @@ export const NovaPublicacao = styled.div`
         padding: 5px 15px;
         border-radius: 10px;
         color: white;
-        font-size: 20px;
+        font-size: 15px;
         background-color: #0B66C2;
         margin-top: 2vh;
         margin-right: 5vw;;
@@ -81,6 +79,7 @@ export const NovaPublicacao = styled.div`
 
 export const Linha = styled.hr`
     padding: 0.5px;
-    background-color: #000000e1;
+    background-color: #00000031;
     display: block;
 `
+

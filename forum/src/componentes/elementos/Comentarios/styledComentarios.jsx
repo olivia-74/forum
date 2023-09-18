@@ -1,13 +1,16 @@
 import styled from "styled-components";
 
 export const ContainerComentarios = styled.div`
-    background-color: #ffffff;
-    padding: 2vh;
-    height: fit-content;
-    display: flex;
-    justify-self: center;
-    border-radius: 15px 15px 15px 15px;
-    flex-wrap: wrap;
+    background-color: #F5F1F0;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    background-color: #F5F1F0;
+    justify-items: center;
+    display: box;
+    justify-content: center;
 
     img{
         height: 50px;

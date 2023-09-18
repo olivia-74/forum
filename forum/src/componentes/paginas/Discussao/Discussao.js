@@ -1,28 +1,48 @@
-import Publicacoes from "../../elementos/Publicacoes/Publicacoes";
+import Feed from "../../elementos/Feed/Feed";
 import Header from "../../elementos/Header/Header"
 import Comentarios from "../../elementos/Comentarios/Comentarios";
 import Footer from "../../elementos/Footer/Footer"
-import { ContainerDiscussao, NovoComentario } from "./styledDiscussao";
+import { Container, NovoComentario, Publicacoes } from "./styledDiscussao";
 
 function Discussao(){
+
     return(
         <>
         <Header/>
-        <Publicacoes/> {/* publicacao tem q estar em "hover" */}
+        <Feed/> {/* publicacao tem q estar em "hover" */}
         
-        <ContainerDiscussao>
+        <Container>
+            <div>
+                <img/>
+                <h2>Usuario</h2>
+                <p>oieeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeewwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</p>
+            </div>
+            <hr/>
+            <div>
+                <img/>
+                <h2>Usuario</h2>
+                <p>oieeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeewwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</p>
+            </div>
+            <hr/>
+            <div>
+                <img/>
+                <h2>Usuario</h2>
+                <p>oieeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeewwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww</p>
+            </div>
+            <hr/>
 
-            <Comentarios/>
-            <Comentarios/>
-            <Comentarios/>
+
+        <NovoComentario>
+            <img src=""/>
+            <input placeholder="Contribuir para a discussao"/>
+            <button>Publicar</button>         
+        </NovoComentario>
+
+        </Container>
 
 
-            <NovoComentario>
-                <img src=""/>
-                <input placeholder="Contribuir para a discussao"/>
-                <button>Publicar</button>
-            </NovoComentario>
-        </ContainerDiscussao>
+            
+       
         <Footer/>
         </>
     )
