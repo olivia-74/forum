@@ -1,11 +1,17 @@
 import Footer from "../../elementos/Footer/Footer"
 import Header from "../../elementos/Header/Header"
 import { Card, Container, TextoDefault } from "./styledPerfil"
+import { useNavigate } from "react-router"
 
 function Perfil(){
-    return(
-        <>
 
+    const navigate = useNavigate()
+    const goToConta = () => {
+        navigate('/conta')
+    }
+
+    return( 
+        <>
         <Header/>
             <Container>
                <Card>
@@ -15,7 +21,7 @@ function Perfil(){
                             <h2>nome real</h2>
                             <h3>@user</h3>
                         </div>
-                        <button>Acessar conta</button>
+                        <button onClick={goToConta}>Acessar conta</button>
                     </header>
                     <p>Ultimas publicacoes <hr/></p>
                     <div>
