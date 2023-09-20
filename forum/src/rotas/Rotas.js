@@ -6,6 +6,7 @@ import Home from "../componentes/paginas/Home/Home";
 import Discussao from "../componentes/paginas/Discussao/Discussao";
 import Perfil from "../componentes/paginas/Perfil/Perfil";
 import Conta from "../componentes/paginas/Conta/Conta";
+import Erro from "../componentes/paginas/Erro/Erro";
 
 
 function Rotas (){
@@ -20,6 +21,8 @@ function Rotas (){
             <Route path="discussao" element={<Discussao/>}/>
             <Route path="perfil" element={<Perfil/>}/>
             <Route path="conta" element={<Conta/>}/>
+            <Route path="erro" element={<Erro/>}/>
+
 
         </Routes>
         </BrowserRouter>

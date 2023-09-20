@@ -23,6 +23,9 @@ function Header(){
     const goToPerfil = () => {
         navigate('/perfil')
     }
+    const goToErro = () => {
+        navigate('/erro')
+    }
 
     return(
         <>
@@ -35,7 +38,7 @@ function Header(){
             <ContainerBotoes> 
                 <button onClick={handleLogout}>🚪 <p>Sair</p> </button>  
                 <button onClick={goToPerfil}>👤 <p>Perfil</p> </button>  
-                <button onClick={goToHome}>🔔 <p>Notificacoes</p> </button>                
+                <button onClick={goToErro}>🔔 <p>Notificacoes</p> </button>                
                 <button onClick={goToHome}>💬 <p>Forum</p> </button>                              
             </ContainerBotoes>
         </ContainerHeader>
