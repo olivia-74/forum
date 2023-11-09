@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export const useForm = (estadoInicial) => {
 
-    const[form, setForm] = useState()
+    const[form, setForm] = useState(estadoInicial)
 
     const onChangeForm = (event) => {
         const {value, name} = event.target

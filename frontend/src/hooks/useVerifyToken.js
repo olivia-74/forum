@@ -7,7 +7,7 @@ export const useVerifyToken = () => {
     useEffect(() => {
         const token = localStorage.getItem('token')
         if(token === null)
-            navigate('/login')
+            navigate('/entrar')
     }, [navigate])
 }
 

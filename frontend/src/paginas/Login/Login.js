@@ -9,7 +9,9 @@ import Logo from "../../assets/logo.png"
 
 function Login() {
 
-    const {form, onChangeForm, handleSubmit, message} = useData({nome:'', password:''}, '/user/login')
+    const {form, onChangeForm, handleSubmit, message} = useData({username:'', password:''},'/user/login')
+
+    console.log(form)
 
     useTokenNotNull()
 
@@ -31,7 +33,12 @@ function Login() {
                     <form onSubmit={handleSubmit}>
                         <h1> Entrar </h1>
                         <label>E-mail:</label>
-                        <input type="text" placeholder="Nome" name='nome' value={form.name} onChange={onChangeForm}/>
+                        <input type="text" 
+                        placeholder="Nome" 
+                        name='username' 
+                        value={form.username}
+                        onChange={onChangeForm}
+                        />
                         <label>Senha:</label>
                         <input type="password" placeholder="Senha" name='password' value={form.password} onChange={onChangeForm}/>
                         {message && <p>{message}</p>}

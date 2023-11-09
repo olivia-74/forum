@@ -19,9 +19,13 @@ const SignupPage = () => {
         <Container>
             <Card>
                 <form onSubmit={handleSubmit}>
-                    <input placeholder="Nome" name="username" type="text" value={form.username} onChange={onChangeForm}/>
-                    <input placeholder="E-mail" name="email" type="email" value={form.email} onChange={onChangeForm}/>
-                    <input placeholder="Senha" name="password" type="password" value={form.password} onChange={onChangeForm}/>
+                <h1> Criar conta </h1>
+                <label>Nome</label>
+                    <input placeholder="Insira seu nome" name="username" type="text" value={form.username} onChange={onChangeForm}/>
+                <label>E-mail:</label>
+                    <input placeholder="Insira seu e-mail" name="email" type="email" value={form.email} onChange={onChangeForm}/>
+                <label>Senha:</label>
+                    <input placeholder="Defina uma senha" name="password" type="password" value={form.password} onChange={onChangeForm}/>
                     {message && <p>{message}</p>}
                     <button type="submit">Cadastrar</button>
                 </form>

@@ -43,7 +43,7 @@ export const Cabecalho = styled.header`
 
 export const Card = styled.div`
     background-color: #FFFFFF;
-    margin: 10vh 0vh 10vh 0;
+    margin-top: 10vh;
     width:fit-content;
     height: fit-content;
     border-radius: 50px;
@@ -90,6 +90,7 @@ export const Card = styled.div`
         margin-bottom: 4vh;
         width: 25vw;
         height: 5vh;
+        display: block;
     }
 
     button{
@@ -117,7 +118,7 @@ export const Card = styled.div`
 
 export const Footer = styled.footer`
     background-color: #182779;
-    margin-top: 25vh;
+    margin-top: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;

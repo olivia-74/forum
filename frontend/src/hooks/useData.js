@@ -13,7 +13,7 @@ export const useData = (initialForm, path) => {
     const handleSubmit = (event) =>{
         event.preventDefault()
 
-        axios.post(`${base_url} ${path}`, form)
+        axios.post(`${base_url}${path}`, form)
         .then(response => {
             if(response.data.token){
                 localStorage.setItem('token', response.data.token)
